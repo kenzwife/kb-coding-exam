@@ -1,0 +1,32 @@
+<%= form_for @student do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, :size => 30 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :profile %>
+    <%= f.text_field :profile, :size => 140 %>
+  </div>
+  
+ <div class="field">
+    <%= f.label :mentor %>
+    <%= f.text_field :mentor, :size => 140 %>
+  </div>
+
+ <div class="field">
+    <%= f.label :grade %>
+    <%= f.select :grade,
+    [["1", "1"],
+    ["2", "2"],
+    ["3", "3"],
+    ["4", "4"],
+    ["5", "5"],
+    ["6", "6"],
+    ["M1", "M1"],
+    ["M2", "M2"]], include_blank: "選択して下さい" %>
+  </div>
+
+
+  <%= f.submit "編集する" %>
+<% end %>
